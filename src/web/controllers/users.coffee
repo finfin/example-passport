@@ -49,7 +49,7 @@ exports.postlogin = (req, res, next) ->
 
 exports.logout = (req, res) ->
 	req.logout()
-	res.redirect "/"
+	res.redirect "/login"
 
 exports.listUser = (req, res) ->
 	util.log helper.parseProjection(req.query)

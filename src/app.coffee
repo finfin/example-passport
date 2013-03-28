@@ -63,7 +63,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')))
 
 
 #WEB Route
-app.get('/', views.index)
+app.get('/', pass.ensureAuthenticated, views.index)
 app.get('/login', user.getlogin)
 app.post('/login', user.postlogin)
 app.get('/logout', user.logout)
