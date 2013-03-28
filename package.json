@@ -1,6 +1,15 @@
 {
   "name": "example-passport",
-  "version": "0.1",
+  "version": "0.1.0",
+  "author": "finfin <finfin@gmail.com>",
+  "description": "An example project for passportJS",
+  "scripts": {
+    "start": "node lib/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/finfin/example-passport.git"
+  },
   "dependencies": {
     "express": "*",
     "mongodb": "*",
