@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	.navbar.navbar-inverse.navbar-fixed-top
+		.navbar-inner
+			.container
+				a.brand(href='/') Passport-Example
+				.nav-collapse.collpase
+					ul.nav.pull-right
+						li Hi, #{user.username}
+						if user.admin
+							li
+								a(href='/admin/users')
+									i.icon-wrench.icon-white
+						li
+							a(href='/logout')
+								i.icon-off.icon-white
+				
+					
+	.container(style="padding-top: 50px")
+		h1= title
+		p This page should only be able to see after logged in.
+
+		if user.admin
+			p You have administration previledge, have the access to user list page (top-right wrench icon).
+		else
+			p You are a normal user.

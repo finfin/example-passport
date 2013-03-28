@@ -1,0 +1,22 @@
+{
+  "name": "DOVE-server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongodb": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "mongoose": "*",
+    "bcrypt": "*",
+  	"chai": "*",
+  	"mocha": "*",
+    "jade": "*",
+    "xtend": "*",
+    "async": "*"
+  }
+}
+

@@ -1,0 +1,54 @@
+extends ../layout
+
+block content
+	.navbar.navbar-inverse.navbar-fixed-top
+		.navbar-inner
+			.container
+				a.brand(href='/') Passport-Example
+				.nav-collapse.collpase
+					ul.nav.pull-right
+						li Hi, #{login_user.username}
+						if login_user.admin
+							li
+								a(href='/admin/users')
+									i.icon-wrench.icon-white
+						li
+							a(href='/logout')
+								i.icon-off.icon-white
+				
+					
+	.container(style="padding-top: 50px")
+		.row-fluid
+			h1 使用者列表
+				button.btn.btn-large.pull-right 
+					i.icon-plus
+					&nbsp;新增使用者
+			table.table.table-hover
+				thead
+					tr
+						th ID
+						th 管理員
+						th 操作
+				tbody
+					each user in users
+						tr
+							td= user.username
+							td
+								if user.admin
+									i.icon-ok
+							td
+								a(data-toggle="modal", data-target="#usermodal", href="/admin/users/#{user._id}")
+									i.icon-pencil
+								&nbsp;
+								i.icon-trash
+		#usermodal.modal.hide.fade(tabindex="-1",role="dialog", aria-labelledby="usermodal", aria-hidden="true")
+			.modal-header
+				button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+				h3#myModalLabel 編輯使用者
+			.modal-body
+				
+			.modal-footer
+				a.pull-left(data-dismiss="modal", aria-hidden="true") 取消
+				.pull-right
+					input#userResetBtn.btn(type="reset") 重設
+					input#userSubmitBtn.btn.btn-primary(type="submit") 更新

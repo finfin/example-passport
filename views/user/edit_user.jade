@@ -1,0 +1,22 @@
+form#userform.form-horizontal(method="update", action="/admin/user/#{user._id}")
+
+	.control-group
+		.control-label 帳號
+		.controls= user.username
+	
+	.control-group
+		.control-label 管理員
+		.controls
+			label.radio.inline
+				if user.admin
+					input(type="radio", name="admin", value="true", checked)
+				else
+					input(type="radio", name="admin", value="true")
+				是
+			label.radio.inline
+				if user.admin
+					input(type="radio", name="admin", value="false") 
+				else
+					input(type="radio", name="admin", value="false", checked) 
+				否
+	

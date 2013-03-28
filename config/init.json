@@ -1,0 +1,15 @@
+{
+	"users": [
+		{
+			"username": "admin", 
+			"email": "admin@hungrybird.no-ip.org", 
+			"password": "secret", 
+			"admin": true
+		},
+		{
+			"username": "user", 
+			"email": "user@hungrybird.no-ip.org", 
+			"password": "secret", 
+			"admin": false}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"development": {
+		"WEB_PORT": 8001,
+		"DB": {
+			"NAME": "devDB",
+			"HOST": "localhost",
+			"PORT": 27017
+		}
+	},
+	"production": {
+		"WEB_PORT": 80,
+		"DB": {
+			"NAME": "devDB",
+			"HOST": "localhost",
+			"PORT": 27017
+		}
+	}
+}
